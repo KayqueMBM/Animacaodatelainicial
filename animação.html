@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Cine</title>
+    <style>
+        body{
+            background-color: #0d0a00;
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+        }
+
+        .cabecalho{
+            width: 100%;
+            height: 90px;
+            background-color: rgb(115, 40, 30);
+            position: fixed;
+            top: 0px;
+            color:white;
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .rodape{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            font-size: 24px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .titulo{
+            font-size:80px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .virtual{
+            font-size:20px;
+            font-family:'Courier New', Courier, monospace;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 22px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+        .button1 {background-color: rgb(115, 40, 30);}
+        .button2 {background-color: rgb(115, 40, 30);}
+        .button:hover
+        { background-color: #000000;
+            transition: 0.5s;
+            opacity: 0.7;
+        }
+
+        .piscar{
+            font-size: larger;
+        font-family:Arial, Helvetica, sans-serif;
+        color:#070000;
+        animation: animate 1.5s linear infinite;
+        }
+       
+        @keyframes animate{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0.7;
+        }
+        100%{
+            opacity: 0;
+        }
+        }
+
+        .imagens{
+            text-align: right;
+        }
+        .d1
+        {
+            position: absolute;
+            top: 300px;
+            left: 0px;
+            animation: gira 2s infinite alternate;
+            width: 200px;
+            height: 200px;
+            background: blue;
+            box-shadow: 5px 5px;
+        }
+        .d2
+        {
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            animation: gira2 5s infinite alternate;
+            width: ;
+            height: 200px;
+            animation-delay: 5s;  /* inicia em 2s  */
+        }
+        @keyframes gira{
+            0% {top: 300px; left: 0px; rotate: 0deg;}
+            100% {top: 300px; left: 1100px; rotate: 360deg;}
+        }
+        @keyframes gira2{
+           
+            0%   {top: 100px; left: 0px; rotate: 0deg; }
+           
+            100% { top: 100px; left: 1100px; rotate: 360deg;
+                   width: 0px; height: 0px;
+                 }
+        }
+        div.img{position: relative; width: 330px;}
+        div.img > img{width:100%; height: 100%}
+        div.img > div{position: absolute; left: 50%; margin-left: -280px; top: 50%; margin-top: -250px; width:50%; height: 50%; color: #FFF;}        
+    </style>
+</head>
+<body>
+   
+    <div class="cabecalho">
+        <table>
+            <tr>
+                <td width="500px" class="virtual"><h1>Virtual Cine</h1></td>
+                <td width="1000px"><h1>Categoria <img src="seta.png" height="80%"> Destaques <img src="seta.png" height="80%"> Combos <img src="seta.png" height="80%"></h1></td>
+                <td width="300px"><a href=""><img src="Lupa-branca.webp" width=50px></a></td>
+                <td width="200px"<a href=""><img src="Perfil.png" width=80px></a></td>
+            </tr>
+        </table>
+     </div>
+   <div>
+        <table>
+            <tr>
+                <td width="700px">
+                    <table>
+                        <tr><td class="titulo"><p class="piscar" style="color:white;">Um novo jeito de assistir em casa.</p></td></tr>
+                        <tr><td align="center">
+                                <button class="button button1">Entrar</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <style>
+                                    .linha {
+                                    border-left: 6px solid white;
+                                    height: 90px;
+                                    position: absolute;
+                                    left: 300px;
+                                    margin-left: -3px;
+                                    top: 600px;
+                                    }
+                                </style>
+                                <div class="linha"></div>
+                                <button class="button button2">Cadastrar-se</button></td></tr>
+                    </table>
+                </td>
+                <td><img src="cinema.jpg" width=900px></td>
+            </tr>
+        </table>
+    </div>
+    <div class="rodape">
+        <table>
+            <tr>
+                <td align="center" width="600px">Assista os melhores filmes em 3D</td>
+            </tr>
+        </table>
+    </div>
+    <table width="300px" height="300px">
+        <tr>
+            <td align="right">
+                <div class="img">
+                    <img src="2_Fast_2_Furious_2003.jpg" height=330px>
+                    <div><img src="3D.png"></div>
+                </div>
+            </td>
+            <td align="right">
+                <div class="img">
+                    <img src="Harry Potter.jpg" height=330px>
+                    <div><img src="3D.png"></div>
+                </div>
+            </td>
+            <td align="right">
+                <div class="img">
+                    <img src="Carros.jpg" height=330px>
+                    <div><img src="3D.png"></div>
+                </div>
+           
+            </td>
+        </tr>
+    </table>
+    <div class="d2"><img src="desconto.png" width="200px"></div>
+ </body>
+</html>
