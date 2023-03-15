@@ -53,6 +53,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 30px;
+
         }
         .button1 {background-color: rgb(115, 40, 30);}
         .button2 {background-color: rgb(115, 40, 30);}
@@ -105,6 +106,41 @@
             height: 200px;
             animation-delay: 0,5s;
         }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .categorias{
+            width: 150px;
+            height: 500px;
+            background-color: gray;
+            position: absolute;
+            top: 100px;
+            left: 470px;
+            display: none;
+        }
+        .destaques{
+            width: 150px;
+            height: 500px;
+            background-color: gray;
+            position: absolute;
+            top: 100px;
+            left: 670px;
+            display: none;
+        }
+        .combos{
+            width: 150px;
+            height: 520px;
+            background-color: gray;
+            position: absolute;
+            top: 100px;
+            left: 870px;
+            display: none;
+        }
         @keyframes gira{
             0% {top: 300px; left: 0px; rotate: 0deg;}
             100% {top: 300px; left: 1100px; rotate: 360deg;}
@@ -125,6 +161,44 @@
 <body>
    
     <div class="cabecalho">
+        <div class="categorias">
+            Aventura <br><br>
+            Terror <br><br>
+            Ação <br><br>
+            Romance <br><br>
+            Comédia <br><br>
+            Drama <br><br>
+            Suspense <br><br>
+            Documentário <br><br>
+            Ficção científica <br><br>
+            Fantansia<br><br>
+            Animação<br><br>
+            Super-herói<br><br>
+        </div>
+        <div class="destaques">
+            Gato de Botas 2: O Último Pedido <br><br>
+            O Esquadrão Suicida 2 <br><br>
+            Mad Max: Estrada da Fúria <br><br>
+            Enrolados <br><br>
+            Matrix Resurrections <br><br>
+            Titanic <br><br>
+            Harry Potter e o Prisioneiro de Azkaban <br><br>
+            Homem-Aranha no Aranhaverso <br><br>
+            Sausage Party <br><br>
+        </div>
+        <div class="combos">
+            Hambúrguer e coca-cola <br><br>
+            Pastel e caldo de cana <br><br>
+            Tacos e churros <br><br>
+            Cachorro quente e suco <br><br>
+            Pizza e Fini <br><br>
+            Pipoca e guaraná <br><br>
+            Sanduíche e Bibs <br><br>
+            Batata frita e fanta <br><br>
+            Coxinha e Kitkat <br><br>
+            Torta e sorvete <br><br>
+            Chips e açaí
+        </div>
         <table>
             <tr>
                 <td width="500px" class="virtual"><h1>Virtual Cine</h1></td>
@@ -141,7 +215,11 @@
                     <table>
                         <tr><td class="titulo"><p class="piscar" style="color:white;">Um novo jeito de assistir em casa.</p></td></tr>
                         <tr><td align="center">
-                                <button class="button button1">Entrar</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button class="button button1">
+                                    <a href="entrar.html" target="_blank">
+                                    Entrar
+                                </a>
+                                </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <style>
                                     .linha {
                                     border-left: 6px solid white;
@@ -153,7 +231,11 @@
                                     }
                                 </style>
                                 <div class="linha"></div>
-                                <button class="button button2">Cadastrar-se</button></td></tr>
+                                <button class="button button2">
+                                    <a href="cadastrar-se.html" target="_blank">
+                                    Cadastrar-se
+                                </a>
+                                </button></td></tr>
                     </table>
                 </td>
                 <td><img src="cinema.jpg" width=900px></td>
