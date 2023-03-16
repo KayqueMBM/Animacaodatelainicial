@@ -22,6 +22,7 @@
             color:white;
             text-align: center;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            z-index: 1;
         }
 
         .rodape{
@@ -116,30 +117,62 @@
         }
         .categorias{
             width: 150px;
-            height: 500px;
+            height: 400px;
             background-color: gray;
             position: absolute;
-            top: 100px;
+            top: -400px;
             left: 470px;
-            display: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            color: white;
+          
         }
+        .desliza{
+            animation: deslizar 3s forwards;
+        }
+        @keyframes deslizar {
+            0%{top: -400px;}
+            100%{top: 90px;}
+        }
+        .txt_categoria,.txt_combo,.txt_destaque
+        {
+            cursor:pointer;
+        }
+       
         .destaques{
             width: 150px;
-            height: 500px;
+            height: 400px;
             background-color: gray;
             position: absolute;
-            top: 100px;
+            top: -400px;
             left: 670px;
-            display: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            color: white;
+           
         }
         .combos{
             width: 150px;
-            height: 520px;
+            height: 400px;
             background-color: gray;
             position: absolute;
-            top: 100px;
+            top: -400px;
             left: 870px;
-            display: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            color: white;
         }
         @keyframes gira{
             0% {top: 300px; left: 0px; rotate: 0deg;}
@@ -159,50 +192,52 @@
     </style>
 </head>
 <body>
-   
+    <div class="categorias" id="categorias">
+        <div>Aventura</div>
+        <div>Terror</div>
+        <div>Ação</div>
+        <div>Romance</div>
+        <div>Comédia</div>
+        <div>Drama</div>
+        <div>Suspense</div>
+        <div>Documentário</div>
+        <div>Ficção científica</div>
+        <div>Fantansia</div>
+        <div>Animação</div>
+        <div>Super-herói</div>
+    </div>
+    <div class="destaques" id="destaques" >
+        <div>Gato de Botas 2: O Último Pedido</div>
+        <div>O Esquadrão Suicida 2</div>
+        <div>Mad Max: Estrada da Fúria</div>
+        <div>Enrolados</div>
+        <div>Matrix Resurrections</div>
+        <div>Titanic</div>
+        <div>Harry Potter e o Prisioneiro de Azkaban</div>
+        <div>Homem-Aranha no Aranhaverso</div>
+        <div>Sausage Party</div>
+    </div>
+    <div class="combos" id="combos">
+        <div>Hambúrguer e coca-cola</div>
+        <div>Pastel e caldo de cana</div>
+        <div>Tacos e churros</div>
+        <div>Cachorro quente e suco</div>
+        <div>Pizza e Fini</div>
+        <div>Pipoca e guaraná</div>
+        <div>Sanduíche e Bibs</div>
+        <div>Batata frita e fanta</div>
+        <div>Coxinha e Kitkat</div>
+        <div>Torta e sorvete</div>
+        <div>Chips e açaí</div>
+    </div>
     <div class="cabecalho">
-        <div class="categorias">
-            Aventura <br><br>
-            Terror <br><br>
-            Ação <br><br>
-            Romance <br><br>
-            Comédia <br><br>
-            Drama <br><br>
-            Suspense <br><br>
-            Documentário <br><br>
-            Ficção científica <br><br>
-            Fantansia<br><br>
-            Animação<br><br>
-            Super-herói<br><br>
-        </div>
-        <div class="destaques">
-            Gato de Botas 2: O Último Pedido <br><br>
-            O Esquadrão Suicida 2 <br><br>
-            Mad Max: Estrada da Fúria <br><br>
-            Enrolados <br><br>
-            Matrix Resurrections <br><br>
-            Titanic <br><br>
-            Harry Potter e o Prisioneiro de Azkaban <br><br>
-            Homem-Aranha no Aranhaverso <br><br>
-            Sausage Party <br><br>
-        </div>
-        <div class="combos">
-            Hambúrguer e coca-cola <br><br>
-            Pastel e caldo de cana <br><br>
-            Tacos e churros <br><br>
-            Cachorro quente e suco <br><br>
-            Pizza e Fini <br><br>
-            Pipoca e guaraná <br><br>
-            Sanduíche e Bibs <br><br>
-            Batata frita e fanta <br><br>
-            Coxinha e Kitkat <br><br>
-            Torta e sorvete <br><br>
-            Chips e açaí
-        </div>
+        
         <table>
             <tr>
                 <td width="500px" class="virtual"><h1>Virtual Cine</h1></td>
-                <td width="1000px"><h1>Categoria <img src="seta.png" height="80%"> Destaques <img src="seta.png" height="80%"> Combos <img src="seta.png" height="80%"></h1></td>
+                <td width="1000px"><h1><span onclick="mostramenucategoria();" class="txt_categoria">Categoria</span> 
+                    <img src="seta.png" height="80%"><span onclick="mostramenudestaque();" class="txt_destaque">Destaques </span> 
+                    <img src="seta.png" height="80%"> <span onclick="mostramenucombo();" class="txt_combo">Combos</span> <img src="seta.png" height="80%"></h1></td>
                 <td width="300px"><a href=""><img src="Lupa-branca.webp" width=50px></a></td>
                 <td width="200px"<a href=""><img src="Perfil.png" width=80px></a></td>
             </tr>
@@ -279,4 +314,28 @@
     </table>
     <div class="d2"><img src="desconto.png" width="200px"></div>
  </body>
+ <script>
+    function mostramenucategoria()
+    {
+        
+        categorias.classList.remove("desliza");
+        destaques.classList.remove("desliza");
+        combos.classList.remove("desliza");
+        categorias.classList.add("desliza");
+    }
+    function mostramenudestaque()
+    {
+        categorias.classList.remove("desliza");
+        destaques.classList.remove("desliza");
+        combos.classList.remove("desliza");
+        destaques.classList.add("desliza");
+    }
+    function mostramenucombo()
+    {
+        categorias.classList.remove("desliza");
+        destaques.classList.remove("desliza");
+        combos.classList.remove("desliza");
+        combos.classList.add("desliza");
+    }
+ </script>
 </html>
