@@ -132,11 +132,18 @@
           
         }
         .desliza{
-            animation: deslizar 3s forwards;
+            animation: deslizar 2s forwards;
         }
         @keyframes deslizar {
             0%{top: -400px;}
             100%{top: 90px;}
+        }
+        .sobe{
+            animation: subir 2s forwards;
+        }
+        @keyframes subir {
+            0%{top: 90px;}
+            100%{top: -400px;}
         }
         .txt_categoria,.txt_combo,.txt_destaque
         {
@@ -315,27 +322,84 @@
     <div class="d2"><img src="desconto.png" width="200px"></div>
  </body>
  <script>
+    c = 0
+    d = 0
+    co = 0
     function mostramenucategoria()
     {
+        c = c + 1 
+
+        if (d==1)  
+        {
+            destaques.classList.add("sobe");
+            d = 0
+        }
+        if (co==1)  
+        {
+            combos.classList.add("sobe");
+            d = 0
+        }
+        if (c == 1)
+        {
+            categorias.classList.add("desliza");
+            categorias.classList.remove("sobe");
+        }
+        else{
+            categorias.classList.add("sobe");
+            categorias.classList.remove("desliza");
+            c=0
+        }
         
-        categorias.classList.remove("desliza");
-        destaques.classList.remove("desliza");
-        combos.classList.remove("desliza");
-        categorias.classList.add("desliza");
     }
     function mostramenudestaque()
     {
-        categorias.classList.remove("desliza");
-        destaques.classList.remove("desliza");
-        combos.classList.remove("desliza");
-        destaques.classList.add("desliza");
+        d = d + 1 
+
+        if (c==1)  
+        {
+            categorias.classList.add("sobe");
+            c = 0
+        }
+        if (co==1)  
+        {
+            combos.classList.add("sobe");
+            co = 0
+        }
+        if (d == 1)
+        {
+            destaques.classList.add("desliza");
+            destaques.classList.remove("sobe");
+        }
+        else{
+            destaques.classList.add("sobe");
+            destaques.classList.remove("desliza");
+            d=0
+        }
     }
     function mostramenucombo()
     {
-        categorias.classList.remove("desliza");
-        destaques.classList.remove("desliza");
-        combos.classList.remove("desliza");
-        combos.classList.add("desliza");
+        co = co + 1 
+
+        if (c==1)  
+        {
+            categorias.classList.add("sobe");
+            c = 0
+        }
+        if (d==1)  
+        {
+            destaques.classList.add("sobe");
+            d = 0
+        }
+        if (co == 1)
+        {
+            combos.classList.add("desliza");
+            combos.classList.remove("sobe");
+        }
+        else{
+            combos.classList.add("sobe");
+            combos.classList.remove("desliza");
+            co=0
+        }
     }
  </script>
 </html>
