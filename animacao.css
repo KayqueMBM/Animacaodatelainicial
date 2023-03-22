@@ -1,4 +1,4 @@
- body{
+        body{
             background-color: #0B090A;
             display: flex;
             align-content: center;
@@ -170,7 +170,7 @@
             background-color: gray;
             position: absolute;
             top: -400px;
-            left: 710px;
+            left: 700px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -186,7 +186,7 @@
             background-color: gray;
             position: absolute;
             top: -400px;
-            left: 930px;
+            left: 920px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
