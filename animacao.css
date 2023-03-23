@@ -73,9 +73,9 @@
             border-left: 6px solid white;
             height: 90px;
             position: absolute;
-            left: 280px;
+            left: 325px;
             margin-left: -3px;
-            top: 520px;
+            top: 600px;
          }
         .piscar{
             font-size: larger;
@@ -134,7 +134,7 @@
             background-color: #660708;
             position: absolute;
             top: -400px;
-            left: 470px;
+            left: 615px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -172,7 +172,7 @@
             background-color: #660708;
             position: absolute;
             top: -400px;
-            left: 700px;
+            left: 855px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -188,7 +188,7 @@
             background-color: #660708;
             position: absolute;
             top: -400px;
-            left: 920px;
+            left: 1070px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
