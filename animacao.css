@@ -131,7 +131,7 @@
         .categorias{
             width: 150px;
             height: 400px;
-            background-color: gray;
+            background-color: #660708;
             position: absolute;
             top: -400px;
             left: 470px;
@@ -169,7 +169,7 @@
         .destaques{
             width: 150px;
             height: 400px;
-            background-color: gray;
+            background-color: #660708;
             position: absolute;
             top: -400px;
             left: 700px;
@@ -185,7 +185,7 @@
         .combos{
             width: 150px;
             height: 400px;
-            background-color: gray;
+            background-color: #660708;
             position: absolute;
             top: -400px;
             left: 920px;
