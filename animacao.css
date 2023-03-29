@@ -71,14 +71,6 @@
             transition: 0.5s;
             opacity: 0.7;
         }
-        .linha {
-            border-left: 6px solid white;
-            height: 90px;
-            position: absolute;
-            left: 275px;
-            margin-left: -3px;
-            top: 525px;
-         }
         .piscar{
             font-size: larger;
         font-family:Arial, Helvetica, sans-serif;

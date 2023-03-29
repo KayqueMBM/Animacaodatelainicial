@@ -15,27 +15,45 @@ body{
 }
 .conteudo{
     width: 100%;
-    background-color: yellow;
+    background-color: red;
     display: flex;
     flex-direction: row;
 }
 .lado_direito{
     width: 100%;
     height: 450px;
-    background-color: gray;
+    background-color: rgb(10, 5, 5);
 }
 .titulo {
     width: 100%;
-    height: 150px;
-    background-color: rgb(29, 27, 34);
+    height: 160px;
+    background-color: rgb(10, 5, 5);
     color: white;
     font-size: 40px;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
   }
+  .avaliacao{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(10, 5, 5);
+    color: white;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  .categoria{
+    background-color: rgb(10, 5, 5);
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+  }
   .frase{
-    background-color: rgb(0, 68, 255);
+    background-color: rgb(10, 5, 5);
     color: white;
     font-size: 20px;
     display: flex;
@@ -44,13 +62,12 @@ body{
   }
   .containerData{
     background-color: none;
-    color: black;
+    color: rgb(29, 27, 34);
     font-size: 15px;
     display: flex;
     flex-direction: row;
-    color: #ccc;
-    
-  }
+    color: w;
+    }
   .data{
     color: whitesmoke;
     font-size: 15px;
@@ -75,6 +92,6 @@ body{
   p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     color: white;
   }
