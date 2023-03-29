@@ -1,0 +1,80 @@
+body{
+    background-color: #0B090A;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+.divisao{
+    width: 100%;
+    height: 100%;
+    background-color: #660708;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    justify-content: center;
+    display: flex;
+}
+.conteudo{
+    width: 100%;
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+}
+.lado_direito{
+    width: 100%;
+    height: 450px;
+    background-color: gray;
+}
+.titulo {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(29, 27, 34);
+    color: white;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  .frase{
+    background-color: rgb(0, 68, 255);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .containerData{
+    background-color: none;
+    color: black;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    color: #ccc;
+    
+  }
+  .data{
+    color: whitesmoke;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    margin-bottom: 5px;
+  }
+  .jun{
+    font-size: 15px;
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 35px;
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+  }
+  
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    letter-spacing: 3px;
+    color: white;
+  }
