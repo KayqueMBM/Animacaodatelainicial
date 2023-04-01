@@ -209,7 +209,7 @@
         div.img > img{width:100%; height: 100%}
         div.img > div{position: absolute; right: 76%; top: 55%; margin-top: -250px; width:50%; height: 50%; color: #FFF;}     
         #divBusca{
-            background-color: lightcoral;
+            background-color: #660708;
             border:solid 1px;
             border-radius:15px;
             width:300px;
@@ -225,4 +225,5 @@
             height:32px;
             width:260px;
             outline: none;
+            color: white;
           }
