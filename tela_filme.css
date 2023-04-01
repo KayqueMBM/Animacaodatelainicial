@@ -18,7 +18,7 @@ body{
     background-color: rgb(10, 5, 5);
     display: flex;
     flex-direction: row;
-}
+s}
 .lado_direito{
     width: 100%;
     height: 450px;
@@ -78,8 +78,8 @@ body{
     font-size: 15px;
     display: flex;
     flex-direction: row;
-    padding-left: 20px;
-    margin-bottom: 5px;
+    padding-left: 30px;
+    margin-bottom: 10px;
   }
   .jun{
     font-size: 15px;

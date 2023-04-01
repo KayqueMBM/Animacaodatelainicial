@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastrar-se.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div id="login">
+        <form class="card">
+            <div class="card-header">
+                <h2>CADASTRO</h2>
+            </div>
+            <div class="card-content">
+                <div class="card-content-area">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" autocomplete="off">
+                </div>
+                <div class="card-content-area">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" autocomplete="off">
+                </div>
+                <div class="card-content-area">
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" autocomplete="off">
+                </div>
+                <div class="card-content-area">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" autocomplete="off">
+                </div>
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="Cadastrar-se" class="submit">
+                <a href="entrar.html" class="recuperar_senha">Já possui uma conta? ENTRAR</a>
+                <br>
+                <a href="javascript:window.history.go(-1)" class="recuperar_senha">VOLTAR</a>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function ValidacaoSenha()
+    {
+        var regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
+        texto= senha.value;
+        resposta= regex.test(texto);
+        if(resposta==false)
+        {
+            senha.classList.remove('certo');
+            senha.classList.add('errado');
+            document.getElementById("erro").style.display = "flex";
+        }
+        if(resposta==true)
+        {
+            document.getElementById("erro").style.display = "none";
+            senha.classList.remove('errado');
+            senha.classList.add('certo');
+        }
+    }
+    function ValidacaoEmail() 
+    {
+        var regex = /^\S+@\S+\.\S+$/;
+        texto= email.value;
+        resposta= regex.test(texto);
+        if(resposta==false)
+        {
+            email.classList.remove('certo');
+            email.classList.add('errado');
+        }
+        if(resposta==true)
+        {
+            email.classList.remove('errado');
+            email.classList.add('certo');
+        }
+    }
+    function ValidacaoCPF()
+    {
+        var regex = /^[0-9]{3}.[0-9]{3}.[0-9]{3}.[0-9]{2}$/g;
+        texto= cpf.value;
+        resposta= regex.test(texto);
+        if(resposta==false)
+        {
+            cpf.classList.remove('certo');
+            cpf.classList.add('errado');
+        }
+        if(resposta==true)
+        {
+            cpf.classList.remove('errado');
+            cpf.classList.add('certo');
+        }
+    }
+</script>
+</html>
