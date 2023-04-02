@@ -27,6 +27,17 @@
         }
         var variavel = queryString("usuario");
 
+        function VerificaBotoes() {
+            if(variavel == undefined){
+                document.getElementById('entrar').style.display = 'inline-block';
+                document.getElementById('cadastro').style.display = 'inline-block';
+            }
+            else{
+                document.getElementById('entrar').style.display = 'none';
+                document.getElementById('cadastro').style.display = 'none';
+            }
+        }
+
         function telafilme1(){
             if (variavel == undefined) {
                 alert('Precisa logar-se antes!')
@@ -65,7 +76,7 @@
         }
 
     </script></head>
-<body>
+<body onload="VerificaBotoes();">
     <div class="categorias" id="categorias">
         <div>Aventura</div>
         <div>Terror</div>
@@ -135,21 +146,26 @@
             <tr>
                 <td width="700px">
                     <table>
-                        <tr><td class="titulo"><p class="piscar" style="color:white;">Um novo jeito de assistir em casa.</p></td></tr>
-                        <tr><td align="center">
+                        <tr>
+                            <td class="titulo">
+                                <p class="piscar" style="color:white;">Um novo jeito de assistir em casa.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
                             <a href="entrar.html">
                                 <button class="button button1" id="entrar">   
                                     Entrar
                                 </button>
                             </a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="cadastrar-se.html">
-                                    <button class="button button2" id="cadastro">
-                                        Cadastrar-se
-                                    </button>
-                                </a>
-                                </td></tr>
-                              
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="cadastrar-se.html">
+                                <button class="button button2" id="cadastro">
+                                    Cadastrar-se
+                                </button>
+                            </a>
+                            </td>
+                        </tr>
                     </table>
                 </td>
                 <td><img src="imagens/cinema.jpg" width=1100px></td>
@@ -179,14 +195,14 @@
             </td>
             <td align="right">
                 <div class="img">
-                    <a href="#"><img src="imagens/Carros.jpg" height=450px onclick="telafilme1();"></a>
+                    <a href="#"><img src="imagens/Carros.jpg" height=450px onclick="telafilme3();"></a>
                     <div><img src="imagens/3D.png"></div>
                 </div>
            
             </td>
             <td align="right">
                 <div class="img">
-                    <a href="#"><img src="imagens/Vingadores.jpg" height=450px onclick="telafilme1();"></a>
+                    <a href="#"><img src="imagens/Vingadores.jpg" height=450px onclick="telafilme4();"></a>
                     <div><img src="imagens/3D.png"></div>
                 </div>
         </tr>

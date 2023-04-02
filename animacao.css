@@ -203,6 +203,7 @@
             align-items: center;
             align-content: center;
             color: white;
+            cursor: pointer;
         }
         @keyframes gira{
             0% {top: 300px; left: 0px; rotate: 0deg;}

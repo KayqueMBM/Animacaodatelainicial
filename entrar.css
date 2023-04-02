@@ -71,6 +71,7 @@ body {
     border:none;
     color:#e1e1e1;
     margin: 10px 0;
+    cursor: pointer;
 }
 .card-footer a {
     text-align: center;
@@ -78,4 +79,8 @@ body {
     opacity: 0.8;
     color: #fff;
     text-decoration: none;
+}
+::-ms-reveal {
+    border-radius: 50%;
+    background-color: #fff;
 }
