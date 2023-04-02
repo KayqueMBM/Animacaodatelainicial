@@ -6,10 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Cine</title>
     <link rel="stylesheet" href="animacao.css">
-    <style>
-          
-    </style>
-</head>
+    <script language="JavaScript">
+        // função pra ler querystring
+        function queryString(parameter) {  
+              var loc = location.search.substring(1, location.search.length);   
+              var param_value = false;   
+              var params = loc.split("&");   
+              for (i=0; i<params.length;i++) {   
+                  param_name = params[i].substring(0,params[i].indexOf('='));   
+                  if (param_name == parameter) {                                          
+                      param_value = params[i].substring(params[i].indexOf('=')+1)   
+                  }   
+              }   
+              if (param_value) {   
+                  return param_value;   
+              }   
+              else {   
+                  return undefined;   
+              }   
+        }
+        var variavel = queryString("usuario");
+
+        function telafilme1(){
+            if (variavel == undefined) {
+                alert('Precisa logar-se antes!')
+            }
+            else
+            {
+                window.location.href= 'tela_filme1.html';
+            }
+        }
+        function telafilme2(){
+            if (variavel == undefined) {
+                alert('Precisa logar-se antes!')
+            }
+            else
+            {
+                window.location.href= 'tela_filme2.html';
+            }
+        }
+        function telafilme3(){
+            if (variavel == undefined) {
+                alert('Precisa logar-se antes!')
+            }
+            else
+            {
+                window.location.href= 'tela_filme3.html';
+            }
+        }
+        function telafilme4(){
+            if (variavel == undefined) {
+                alert('Precisa logar-se antes!')
+            }
+            else
+            {
+                window.location.href= 'tela_filme4.html';
+            }
+        }
+
+    </script></head>
 <body>
     <div class="categorias" id="categorias">
         <div>Aventura</div>
@@ -49,6 +104,12 @@
         <div>Torta e sorvete</div>
         <div>Chips e açaí</div>
     </div>
+    <div class="perfil" id="perfil">
+        <div>Configurações</div>
+        <div>Histórico</div>
+        <div>Conta</div>
+        <div><a href="animação.html">Sair</a></div>
+    </div>
     <div class="cabecalho">
         
         <table>
@@ -63,7 +124,9 @@
                         <img src="imagens/Lupa-branca.webp" width="30px" id="btnBusca" alt="Buscar"/>
                     </div>
                 </td>
-                <td width="200px"<a href=""><img src="imagens/Perfil.png" width=80px></a></td>
+                <td width="200px">
+                    <a href="#" onclick="mostramenuperfil();"><img src="imagens/Perfil.png" width=50px></a>
+                </td>
             </tr>
         </table>
    </div>
@@ -75,13 +138,13 @@
                         <tr><td class="titulo"><p class="piscar" style="color:white;">Um novo jeito de assistir em casa.</p></td></tr>
                         <tr><td align="center">
                             <a href="entrar.html">
-                                <button class="button button1">   
+                                <button class="button button1" id="entrar">   
                                     Entrar
                                 </button>
                             </a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a href="cadastrar-se.html">
-                                    <button class="button button2">
+                                    <button class="button button2" id="cadastro">
                                         Cadastrar-se
                                     </button>
                                 </a>
@@ -104,26 +167,26 @@
         <tr>
             <td align="right">
                 <div class="img">
-                    <a href="tela_filme1.html"><img src="imagens/2_Fast_2_Furious_2003.jpg" height=450px></a>
+                    <a href="#"><img src="imagens/2_Fast_2_Furious_2003.jpg" height=450px onclick="telafilme1();"></a>
                     <div><img src="imagens/3D.png"></div>
                 </div>
             </td>
             <td align="right">
                 <div class="img">
-                    <a href="tela_filme2.html"><img src="imagens/Harry Potter.jpg" height=450px></a>
+                    <a href="#"><img src="imagens/Harry Potter.jpg" height=450px onclick="telafilme2();"></a>
                     <div><img src="imagens/3D.png"></div>
                 </div>
             </td>
             <td align="right">
                 <div class="img">
-                    <a href="tela_filme3.html"><img src="imagens/Carros.jpg" height=450px></a>
+                    <a href="#"><img src="imagens/Carros.jpg" height=450px onclick="telafilme1();"></a>
                     <div><img src="imagens/3D.png"></div>
                 </div>
            
             </td>
             <td align="right">
                 <div class="img">
-                    <a href="tela_filme4.html"><img src="imagens/Vingadores.jpg" height=450px></a>
+                    <a href="#"><img src="imagens/Vingadores.jpg" height=450px onclick="telafilme1();"></a>
                     <div><img src="imagens/3D.png"></div>
                 </div>
         </tr>
@@ -134,6 +197,7 @@
     c = 0
     d = 0
     co = 0
+    p = 0
     function mostramenucategoria()
     {
         c = c + 1 
@@ -146,7 +210,12 @@
         if (co==1)  
         {
             combos.classList.add("sobe");
-            d = 0
+            co = 0
+        }
+        if (p==1)  
+        {
+            perfil.classList.add("sobe");
+            p = 0
         }
         if (c == 1)
         {
@@ -156,7 +225,7 @@
         else{
             categorias.classList.add("sobe");
             categorias.classList.remove("desliza");
-            c=0
+            c = 0
         }
         
     }
@@ -174,6 +243,11 @@
             combos.classList.add("sobe");
             co = 0
         }
+        if (p==1)  
+        {
+            perfil.classList.add("sobe");
+            p = 0
+        }
         if (d == 1)
         {
             destaques.classList.add("desliza");
@@ -182,7 +256,7 @@
         else{
             destaques.classList.add("sobe");
             destaques.classList.remove("desliza");
-            d=0
+            d = 0
         }
     }
     function mostramenucombo()
@@ -199,6 +273,11 @@
             destaques.classList.add("sobe");
             d = 0
         }
+        if (p==1)  
+        {
+            perfil.classList.add("sobe");
+            p = 0
+        }
         if (co == 1)
         {
             combos.classList.add("desliza");
@@ -207,7 +286,37 @@
         else{
             combos.classList.add("sobe");
             combos.classList.remove("desliza");
-            co=0
+            co = 0
+        }
+    }
+    function mostramenuperfil()
+    {
+        p = p + 1 
+
+        if (c==1)  
+        {
+            categorias.classList.add("sobe");
+            c = 0
+        }
+        if (d==1)  
+        {
+            destaques.classList.add("sobe");
+            d = 0
+        }
+        if (co == 1)
+        {
+            combos.classList.add("sobe");
+            co = 0
+        }
+        if (p == 1)
+        {
+            perfil.classList.add("desliza");
+            perfil.classList.remove("sobe");
+        }
+        else{
+            perfil.classList.add("sobe");
+            perfil.classList.remove("desliza");
+            p=0
         }
     }
  </script>

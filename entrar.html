@@ -5,7 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="entrar.css">
-    <title>Cadastro</title>
+    <title>Login</title>
+    <script language="JavaScript">
+        function Login(){
+            var usuario=document.getElementById('usuario').value;
+            usuario=usuario.toLowerCase();
+            var senha=document.getElementById('senha').value;
+            seha=senha.toLowerCase();
+            if (usuario=="kayque" && senha=="123456") {
+                window.open('animação.html?usuario='+usuario,'Virtual Cine');
+            }
+            else{
+                alert("Dados incorretos, tente novamente");
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="login">
@@ -19,12 +33,12 @@
                     <input type="text" id="usuario" autocomplete="off">
                 </div>
                 <div class="card-content-area">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" autocomplete="off">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" autocomplete="off">
                 </div>
             </div>
             <div class="card-footer">
-                <input type="submit" value="Entrar" class="submit">
+                <input type="submit" value="Entrar" class="submit" onclick="Login()">
                 <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
                 <br>
                 <a href="javascript:window.history.go(-1)" class="recuperar_senha">VOLTAR</a>
