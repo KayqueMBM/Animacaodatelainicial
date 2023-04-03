@@ -9,14 +9,24 @@
     <title>Fale Conosco - MQTT</title>
 </head>
 <body>
-    <td width="500px" class="virtual"><h1>Fale Conosco</h1></td>
+ 
+  <br>
+  <div class="barra">
+    <table>
+        <tr>
+            <td align="center" width="600px">Mande seu Feedback pra nós</td>
+        </tr>
+    </table>
+</div>
+    <td width="500px" class="fale_conosco"><h1>Fale Conosco</h1></td>
     <input class="mensagem" type="text" id="mensagem">
     <div class="enviar" id="enviars">
-    <button class="botao_enviar "onclick="Enviar();">Enviar</button>
+    <button class="botao_enviar " onclick="Enviar();">Enviar</button>
+    <button class="botao_enviar " onclick="javascript:window.history.go(-1)">VOLTAR</button>
     <div class="resposta" id="resposta">  </div>
 </body>
 <script>
-  topico = "web/menagem";
+  topico = "senai/mensagem";
   client = new Paho.MQTT.Client("broker.hivemq.com", Number(8000), "");
   client.onConnectionLost = ConexaoPerdida;
   client.onMessageArrived = MensagemRecebida;
