@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="fale_conosco.css">
+    <title>Fale Conosco - MQTT</title>
+</head>
+<body>
+    <td width="500px" class="virtual"><h1>Fale Conosco</h1></td>
+    <input class="mensagem" type="text" id="mensagem">
+    <div class="enviar" id="enviars">
+    <button class="botao_enviar "onclick="Enviar();">Enviar</button>
+    <div class="resposta" id="resposta">  </div>
+</body>
+<script>
+  topico = "web/menagem";
+  client = new Paho.MQTT.Client("broker.hivemq.com", Number(8000), "");
+  client.onConnectionLost = ConexaoPerdida;
+  client.onMessageArrived = MensagemRecebida;
+  client.connect({onSuccess:Conectar});
+  function Conectar() {   
+    client.subscribe(topico);
+  }
+  function ConexaoPerdida(responseObject) {
+    if (responseObject.errorCode !== 0) {
+      resposta.innerHTML += "Desconectado";
+    }
+  }
+  function MensagemRecebida(message) {
+      resposta.innerHTML += "<br><br>" + message.payloadString;
+  }
+  
+  function Enviar()
+  {
+    texto = mensagem.value;
+    message = new Paho.MQTT.Message(texto);
+    message.destinationName = topico;
+    client.send(message);
+  }
+</script>
+</html>
