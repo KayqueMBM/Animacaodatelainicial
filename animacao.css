@@ -63,6 +63,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 30px;
+            box-shadow: 2px 2px 5px #A4161A;
 
         }
         .button1 {background-color: #A4161A;}
