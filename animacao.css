@@ -4,6 +4,7 @@
             display: flex;
             align-content: center;
             flex-direction: column;
+            margin: 0px;
         }
 
         .cabecalho{

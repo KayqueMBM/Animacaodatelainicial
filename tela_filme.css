@@ -3,6 +3,7 @@ body{
     display: flex;
     align-content: center;
     flex-direction: column;
+    margin: 0px;
 }
 .divisao{
     width: 100%;
