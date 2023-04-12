@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&display=swap');
         body{
             background-color: #0B090A;
             display: flex;
             align-content: center;
+            align-items: center;
             flex-direction: column;
             margin: 0px;
+            width: 100%;
+            height: 100vh;
         }
 
         .cabecalho{
             width: 100%;
             height: 90px;
-            background-color: #A4161A;
+            background-color: #0B090A;
+            border-bottom: 5px solid #A4161A;
             position: fixed;
             top: 0px;
             color:white;
@@ -49,7 +54,7 @@
         }
         .virtual{
             font-size:20px;
-            font-family:'Courier New', Courier, monospace;
+            font-family: 'Cormorant Garamond', serif;
         }
 
         .button {
@@ -195,7 +200,7 @@
         .perfil{
             width: 150px;
             height: 200px;
-            background-color: #757474;
+            background-color: black;
             position: absolute;
             top: -400px;
             left: 92%;
@@ -226,8 +231,12 @@
         #divBusca{
             background-color: #660708;
             border:solid 1px;
-            border-radius:15px;
+            border-radius:20px;
             width:300px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            align-content: center;
           }
           
           #txtBusca{
@@ -241,4 +250,21 @@
             width:260px;
             outline: none;
             color: white;
+          }
+          .imgfilme{
+            position: absolute;
+            height:450px;
+          }
+          .icone3d{
+            position: relative;
+            top:0;
+            left:0;
+          }
+          .tabela{
+            background-color: #0B090A;
+            display: flex;
+            gap:374px;
+            width: 100%;
+            height: 100%;
+            margin: 0;
           }
