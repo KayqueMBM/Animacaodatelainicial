@@ -31,10 +31,12 @@
             if(variavel == undefined){
                 document.getElementById('entrar').style.display = 'inline-block';
                 document.getElementById('cadastro').style.display = 'inline-block';
+                document.getElementById('assinar').style.display = 'none';
             }
             else{
                 document.getElementById('entrar').style.display = 'none';
                 document.getElementById('cadastro').style.display = 'none';
+                document.getElementById('assinar').style.display = 'inline-block';
             }
         }
 
@@ -126,7 +128,15 @@
         
         <table>
             <tr>
-                <td width="500px" class="virtual"><h1>Virtual Cine</h1></td>
+                <td width="500px" class="virtual" align="center">
+                    <table>
+                        <tr>
+                            <td><img src="imagens/Logo Virtual Cine.png" height="70px"></td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><h1>Virtual Cine</h1></td>
+                        </tr>
+                    </table>
+                </td>
                 <td width="1000px"><h1><span onclick="mostramenucategoria();" class="txt_categoria">Categorias</span> 
                     <div class="flecha"><</div><span onclick="mostramenudestaque();" class="txt_destaque">Destaques </span> 
                     <div class="flecha"><</div><span onclick="mostramenucombo();" class="txt_combo">Combos</span> <div class="flecha"><</div></h1></td>
@@ -165,11 +175,17 @@
                                     Cadastrar-se
                                 </button>
                             </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="assinar.html">
+                                <button class="button button3" id="assinar">
+                                    Assinar
+                                </button>
+                            </a>
                             </td>
                         </tr>
                     </table>
                 </td>
-                <td><img src="imagens/cinema.jpg" width=900px></td>
+                <td><img src="imagens/cinema gif 2.gif" width=900px></td>
             </tr>
         </table>
     </div>

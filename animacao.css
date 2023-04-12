@@ -75,6 +75,7 @@
         }
         .button1 {background-color: #A4161A;}
         .button2 {background-color: #A4161A;}
+        .button3 {background-color: #A4161A; width: 50%;}
         .button:hover
         { background-color: #000000;
             transition: 0.5s;
