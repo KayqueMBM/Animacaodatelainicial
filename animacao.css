@@ -40,7 +40,7 @@
 
         .rodape{
             width: 100%;
-            height: 100%;
+            height: 90px;
             background-color: white;
             font-size: 30px;
             font-family: 'Poppins', sans-serif;
@@ -200,7 +200,7 @@
         .perfil{
             width: 150px;
             height: 200px;
-            background-color: black;
+            background-color: #660708;
             position: absolute;
             top: -400px;
             left: 92%;
