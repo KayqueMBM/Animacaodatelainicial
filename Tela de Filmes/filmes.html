@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Cine</title>
+    <link rel="stylesheet" href="filmes.css">
+    <script src="filmes.js"></script>
+ 
+    
+</head>
+<body>
+    <div class="principal">
+        <div class="cabecalho">
+            
+            <div class="caixaL">
+                <div class="logoTexto">VIRTUAL CINE</div>
+            </div>
+        </div>
+
+        <div class="caixaContent">
+            <div class="caixaColunas">
+                <div class="caixaTexto">
+                   <h> Clássicos </h>
+                </div>
+
+                <div class="caixaF">
+                    <button onClick="retornarFuncao()" class="setaTras" id = seta> <</button>
+                    
+                    <div id = "container" class="caixaFilmes">
+                        <div class="filmes">
+                        
+                            <div class="filmesCabecalho">3D</div>
+                            <div class="divFilme">
+                             <img src="../imagens/filmeDial.png" onclick="telafilme5();" class="imgFilme"> 
+                                <div class="rodapeFilme">
+                                    <div class="rodapeCabecalhoFilme"> Dial M For Murder (1954) </div>
+                                    <div class="rodapeTextoFilme"> Dial M for Murder é um filme de suspense policial americano de 1954 dirigido por Alfred Hitchcock.</div>
+                                </div>
+                            
+                            </div>
+                    
+                        </div>
+                        <div class="filmes">
+                        
+                            <div class="filmesCabecalho">3D</div>
+                            <div class="divFilme">
+                                <img src="../imagens/filmeHouseWax.png" onclick="telafilme6();" class="imgFilme"> 
+                                <div class="rodapeFilme">
+                                    <div class = "rodapeCabecalhoFilme"> House of Wax (1953) </div>
+                                    <div class = "rodapeTextoFilme">  House of Wax é um filme de terror de 1953, dirigido por Andre DeToth </div>
+                               
+                                </div>
+                            
+                            </div>
+                    
+                        </div>
+                        <div class="filmes">
+                        
+                            <div class="filmesCabecalho">3D</div>
+                            <div class="divFilme">
+                                <img src="../imagens/filmeCreatureFrom.png" onclick="telafilme7();" class="imgFilme"> 
+                                <div class="rodapeFilme">
+                                    <div class = "rodapeCabecalhoFilme"> Creature From the Black Lagoon (1954)  </div>
+                                    <div class = "rodapeTextoFilme"> É um filme de terror 3D em preto e branco americano de 1954 produzido por William Alland. </div>
+                               
+                                </div>
+                            </div>
+                    
+                        </div>
+
+                   
+                        <div class="filmes">
+                        
+                            <div class="filmesCabecalho">3D</div>
+                            <div class="divFilme">
+                                <img src="../imagens/filmeFrank.png" class="imgFilme"> 
+                                <div class="rodapeFilme">
+                                    <div class = "rodapeCabecalhoFilme"> Flesh for Frankenstein (1973) </div>
+                                    <div class = "rodapeTextoFilme"> Flesh for Frankenstein é um filme de terror de 1973 escrito e dirigido por Paul Morrissey. </div>
+                                </div>                  
+                            </div>
+                    
+                        </div>
+                        <button onClick="translacionarFuncao()" class="setaTras" id = seta> ></button>
+                    
+                        <div class="filmes">
+                            <div class="filmesCabecalho">3D</div>
+                            <div class="divFilme">
+                                <img src="../imagens/filmeMagnifecentBodyguards.png" class="imgFilme"> 
+                                <div class="rodapeFilme">
+                                    <div class = "rodapeCabecalhoFilme"> Magnificent Bodyguards (1978) </div>
+                                    <div class = "rodapeTextoFilme"> Magnificent Bodyguards é um filme de ação de artes marciais de Hong Kong,estrelado por Jackie Chan e dirigido por Lo Wei. </div>
+                                </div>
+                           
+                            </div> 
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="caixaTexto">
+                    <h> Destaques </h>
+                 </div>
+                 <div class="caixaF">
+                    <button onClick="retornarFuncao2()" class="setaTras" id = seta2> <</button>
+                    <div id = "container2" class="caixaFilmes">
+                    <div class="filmes">
+                        
+                        <div class="filmesCabecalho">3D</div>
+                        <div class="divFilme">
+                            
+                            <img src="../imagens/filmeGravity.png" class="imgFilme"> 
+                            <div class="rodapeFilme">
+                                <div class="rodapeCabecalhoFilme"> Gravity(2013) </div>
+                                <div class="rodapeTextoFilme">Gravity é um filme de suspense de ficção científica de 2013 dirigido por Alfonso Cuarón, que também co-escreveu, co-editou e produziu o filme.</div>
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+                    <div class="filmes">
+                        
+                        <div class="filmesCabecalho">3D</div>
+                        <div class="divFilme">
+                            <img src="../imagens/filmeAvatar.png" class="imgFilme"> 
+                            <div class="rodapeFilme">
+                                <div class = "rodapeCabecalhoFilme"> Avatar (2009) </div>
+                                <div class = "rodapeTextoFilme">  Avatar é um filme épico de ficção científica estadunidense de 2009, escrito e dirigido por James Cameron </div>
+                               
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+                    <div class="filmes">
+                        
+                        <div class="filmesCabecalho">3D</div>
+                        <div class="divFilme">
+                            <img src="../imagens/filmeTravelToCenter.png" class="imgFilme"> 
+                            <div class="rodapeFilme">
+                                <div class = "rodapeCabecalhoFilme"> Center of the Earth (2008) </div>
+                                <div class = "rodapeTextoFilme"> Em uma missão para descobrir o que aconteceu com seu irmão desaparecido, um cientista, seu sobrinho e seu guia de montanha descobrem um fantástico</div>
+                               
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                   
+                    <div class="filmes">
+                        
+                        <div class="filmesCabecalho">3D</div>
+                        <div class="divFilme">
+                            <img src="../imagens/filmeGhostsOfAbyss.png" class="imgFilme"> 
+                            <div class="rodapeFilme">
+                                <div class = "rodapeCabecalhoFilme"> Ghosts Of The Abyss (2003) </div>
+                                <div class = "rodapeTextoFilme"> É um documentário lançado pela Walt Disney Pictures e Walden Media. Foi dirigido pelo diretor vencedor do Óscar James Cameron </div>
+                            </div>                  
+                        </div>
+                    
+                    </div>
+                    
+                    
+                    <button onClick="translacionarFuncao2()" class="setaTras" id = seta2> ></button>
+                    
+                    
+                    <div class="filmes">
+                        <div class="filmesCabecalho">3D</div>
+                        <div class="divFilme">
+                            <img src="../imagens/filmeTheWalk.png" class="imgFilme"> 
+                            <div class="rodapeFilme">
+                                <div class = "rodapeCabecalhoFilme"> The Walk (2015) </div>
+                                <div class = "rodapeTextoFilme"> The Walk é um filme biográfico de ação e drama em 3D de 2015. </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+
+            </div>
+            
+        </div>
+    </div>
+       
+       
+</body>
+</html>
