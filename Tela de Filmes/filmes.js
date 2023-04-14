@@ -12,6 +12,24 @@ function telafilme6(){
         function telafilme8(){
           window.open("../tela_filme8.html");
           }
+          function telafilme9(){
+               window.open("../tela_filme9.html");
+               }
+               function telafilme10(){
+                    window.open("../tela_filme10.html");
+                    }
+                    function telafilme11(){
+                         window.open("../tela_filme11.html");
+                         }
+                         function telafilme12(){
+                              window.open("../tela_filme12.html");
+                              }
+                              function telafilme13(){
+                                   window.open("../tela_filme13.html");
+                                   }
+                                   function telafilme14(){
+                                        window.open("../tela_filme14.html");
+                                        }
 
 function translacionarFuncao() {
     
