@@ -9,6 +9,9 @@ function telafilme6(){
     function telafilme7(){
         window.open("../tela_filme7.html");
         }
+        function telafilme8(){
+          window.open("../tela_filme8.html");
+          }
 
 function translacionarFuncao() {
     
